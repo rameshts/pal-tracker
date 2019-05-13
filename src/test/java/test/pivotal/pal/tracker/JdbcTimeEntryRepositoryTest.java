@@ -26,8 +26,8 @@ public class JdbcTimeEntryRepositoryTest {
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setUrl(System.getenv("SPRING_DATASOURCE_URL"));
 
-        subject = new JdbcTimeEntryRepository(dataSource);
 
+        subject = new JdbcTimeEntryRepository(dataSource);
         jdbcTemplate = new JdbcTemplate(dataSource);
         jdbcTemplate.execute("DELETE FROM time_entries");
 
